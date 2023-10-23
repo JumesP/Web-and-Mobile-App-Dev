@@ -14,6 +14,7 @@ async function main() {
             bedrooms: 1,
             bathrooms: 2
         })
+        await findOneListingByName(client, "Lovely loft");
 
     } catch (error) {
         console.error(error);
@@ -30,6 +31,19 @@ async function createListing(client, newListing){
 
     // if i dont provide a _id, it creates one
     console.log(`new listing created with the following id: ${result.insertedId}`);
+}
+
+// read listings
+async function findOneListingByName(client, nameOfListing) {
+    client.db("sample_airbnb").collection("listingsAndReviews").findOne({
+        name: nameOfListing
+    })
+
+    if (result) {
+        console.log("found a listing in the collection with the name ${nameOfListing}")
+    } else {
+        console.log("No listings found with that name")
+    }
 }
 
 
