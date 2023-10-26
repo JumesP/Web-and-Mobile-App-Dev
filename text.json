@@ -1,0 +1,102 @@
+[
+  {
+    "_id": ObjectId("product_id_1"),
+    "name": "Mechanical Gaming Keyboard",
+    "brand": "Logitech",
+    "description": "A high-performance mechanical gaming keyboard with customizable RGB lighting.",
+    "price": 99.99,
+    "stock_quantity": 50,
+    "category": "Gaming Keyboards",
+    "image_url": "https://example.com/images/keyboard1.jpg"
+  },
+  {
+    "_id": ObjectId("product_id_2"),
+    "name": "Wireless Mechanical Keyboard",
+    "brand": "Corsair",
+    "description": "A wireless mechanical keyboard with Cherry MX switches and customizable backlighting.",
+    "price": 119.99,
+    "stock_quantity": 30,
+    "category": "Gaming Keyboards",
+    "image_url": "https://example.com/images/keyboard2.jpg"
+  },
+  {
+    "_id": ObjectId("product_id_3"),
+    "name": "Compact Mechanical Keyboard",
+    "brand": "Ducky",
+    "description": "A compact mechanical keyboard with PBT keycaps and RGB lighting.",
+    "price": 89.99,
+    "stock_quantity": 25,
+    "category": "Mechanical Keyboards",
+    "image_url": "https://example.com/images/keyboard3.jpg"
+  },
+  {
+    "_id": ObjectId("product_id_4"),
+    "name": "Ergonomic Split Keyboard",
+    "brand": "Kinesis",
+    "description": "An ergonomic split keyboard designed for improved typing comfort and efficiency.",
+    "price": 159.99,
+    "stock_quantity": 15,
+    "category": "Ergonomic Keyboards",
+    "image_url": "https://example.com/images/keyboard4.jpg"
+  },
+  {
+  "_id": ObjectId("product_id_5"),
+  "name": "Wireless Bluetooth Keyboard",
+  "brand": "Logitech",
+  "description": "A wireless Bluetooth keyboard for versatile connectivity with your devices.",
+  "price": 49.99,
+  "stock_quantity": 40,
+  "category": "Wireless Keyboards",
+  "image_url": "https://example.com/images/keyboard5.jpg"
+  },
+  {
+  "_id": ObjectId("product_id_6"),
+  "name": "RGB Backlit Gaming Keyboard",
+  "brand": "Razer",
+  "description": "An RGB backlit gaming keyboard with customizable macros and mechanical switches.",
+  "price": 129.99,
+  "stock_quantity": 20,
+  "category": "Gaming Keyboards",
+  "image_url": "https://example.com/images/keyboard6.jpg"
+  },
+  {
+  "_id": ObjectId("product_id_7"),
+  "name": "Wireless Compact Keyboard",
+  "brand": "Microsoft",
+  "description": "A wireless compact keyboard for productivity on the go with a touchpad.",
+  "price": 79.99,
+  "stock_quantity": 35,
+  "category": "Wireless Keyboards",
+  "image_url": "https://example.com/images/keyboard7.jpg"
+  },
+  {
+  "_id": ObjectId("product_id_8"),
+  "name": "Mechanical Tenkeyless Keyboard",
+  "brand": "SteelSeries",
+  "description": "A tenkeyless mechanical keyboard with customizable key switches and lighting.",
+  "price": 109.99,
+  "stock_quantity": 30,
+  "category": "Mechanical Keyboards",
+  "image_url": "https://example.com/images/keyboard8.jpg"
+  },
+  {
+  "_id": ObjectId("product_id_9"),
+  "name": "Programmable Ergonomic Keyboard",
+  "brand": "X-Bows",
+  "description": "A programmable ergonomic keyboard designed for increased typing comfort and efficiency.",
+  "price": 149.99,
+  "stock_quantity": 15,
+  "category": "Ergonomic Keyboards",
+  "image_url": "https://example.com/images/keyboard9.jpg"
+  },
+  {
+  "_id": ObjectId("product_id_10"),
+  "name": "Compact Wireless Mechanical Keyboard",
+  "brand": "Keychron",
+  "description": "A compact wireless mechanical keyboard with hot-swappable switches for customization.",
+  "price": 119.99,
+  "stock_quantity": 25,
+  "category": "Mechanical Keyboards",
+  "image_url": "https://example.com/images/keyboard10.jpg"
+  }
+]
