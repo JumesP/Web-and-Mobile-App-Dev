@@ -20,7 +20,7 @@ app.use("/js", express.static(path.join(__dirname, "/node_modules/jquery/dist"))
 const blogRouter = require("./src/routes/blogRoutes")
 app.use("/posts", blogRouter);
 
-app.get("/", function(req, res){
+app.get("/", function(req, res) {
     res.render("index",
         {
             nav: [
