@@ -1,5 +1,5 @@
 const express = require("express");
-const blogRouter = express.Router();
+const shopRouter = express.Router();
 
 const blogs = [
     {
@@ -22,16 +22,16 @@ const blogs = [
     },
 ]
 
-blogRouter.route("/")
+shopRouter.route("/")
     .get((req, res) => {
-        res.render("blogs", {
+        res.render("store", {
             nav: [
-                {link: "/posts", title: "Posts"},
-                {link: "/about", title: "About"},
+                {link: "/shop", title: "Shop"},
+                {link: "/checkout", title: "Checkout"},
             ],
             title: "Blog List",
             blogs
         });
     });
 
-module.exports = blogRouter;
+module.exports = shopRouter;
