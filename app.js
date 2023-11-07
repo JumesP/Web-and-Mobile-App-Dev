@@ -3,6 +3,8 @@ const chalk = require("Chalk");
 const path = require("path");
 const debug = require("debug")("app");
 const morgan = require("morgan");
+const mongoose = require("mongoose")
+const dburi = require("./dburi.json")
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const app = express();
@@ -35,7 +37,7 @@ app.get("/", function (req, res){
 
 // Mongodb connection
 async function main() {
-    const uri = "mongodb+srv://jamesgprice08:qu79lVqZ5F5BFtYD@cluster0.bt81lau.mongodb.net/?retryWrites=true&w=majority"
+    const uri = dburi.dburi
 
     const client = new MongoClient(uri);
 
