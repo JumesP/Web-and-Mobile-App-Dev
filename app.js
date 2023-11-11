@@ -4,7 +4,7 @@ const path = require("path");
 const debug = require("debug")("app");
 const morgan = require("morgan");
 const mongoose = require("mongoose")
-const dburi = require("./dburi.json")
+const dburi = require("./src/v1/config/dburi.json")
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const app = express();
@@ -20,16 +20,16 @@ app.use("/css", express.static(path.join(__dirname, "/node_modules/bootstrap/dis
 app.use("/js", express.static(path.join(__dirname, "/node_modules/bootstrap/dist/js")));
 app.use("/js", express.static(path.join(__dirname, "/node_modules/jquery/dist")));
 
-const shopRouter = require("./src/routes/shopRoutes")
+const shopRouter = require("./src/v1/routes/shopRoutes")
 app.use("/shop", shopRouter);
 
 
-app.get("/", function (req, res){
+app.get("/", function (req, res) {
     res.render("homepage",
         {
             nav: [
-                {link: "/store", title: "Store"},
-                {link: "/checkout", title: "Checkout"},
+                { link: "/store", title: "Store" },
+                { link: "/checkout", title: "Checkout" },
             ],
             title: "My Online Store"
         })
@@ -72,6 +72,6 @@ async function listDatabases(client) {
 }
 
 // run node
-app.listen(port, function (){
+app.listen(port, function () {
     debug(`Listening on port ${chalk.green(port)}`);
 });

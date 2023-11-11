@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const dburi = require("./dburi.json")
+const dburi = require("../../dburi.json")
 
 main().catch(err => console.log(err));
 
