@@ -12,7 +12,7 @@ const port = process.env.PORT || 3001;
 app.use(morgan("tiny"));
 
 app.use(express.static(__dirname + '/public'));
-app.set("views", "./src/views");
+app.set("views", "./src/v1/views");
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "/public")));
