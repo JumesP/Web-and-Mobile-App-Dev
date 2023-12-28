@@ -20,6 +20,7 @@ async function main() {
             minimumNumberOfBathrooms: 2,
             maximumNumberOfResults: 5
         });
+
     } catch (error) {
         console.error(error);
     }   finally {
@@ -78,6 +79,7 @@ async function findOneListingByName(client, nameOfListing) {
         console.log(`No listings found with that name`)
     }
 }
+
 
 
 //read db headers
