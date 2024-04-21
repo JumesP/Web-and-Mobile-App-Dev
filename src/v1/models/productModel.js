@@ -29,3 +29,5 @@ module.exports = mongoose.model('product', product)
 //     category: "Fruit",
 //     description: "A sweet fruit"
 // }
+
+    // "start": "DEBUG=app nodemon app.js"
