@@ -4,3 +4,7 @@ GET http://127.0.0.1:3000/products
 
 
 GET http://127.0.0.1:3000/products/12
+
+###
+
+POST http://127.0.0.1:3000/api/products 

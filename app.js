@@ -7,6 +7,8 @@ const mongoose = require("mongoose")
 const dburi = require("./src/v1/config/dburi.json")
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
+// console.log(dburi["dburi"])
+
 const app = express();
 const port = process.env.PORT || 3001;
 app.use(morgan("tiny"));
@@ -15,15 +17,21 @@ app.use(express.static(__dirname + '/public'));
 app.set("views", "./src/v1/views");
 app.set("view engine", "ejs");
 
+
+
+// app.use(fileUpload());
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/css", express.static(path.join(__dirname, "/node_modules/bootstrap/dist/css")));
 app.use("/js", express.static(path.join(__dirname, "/node_modules/bootstrap/dist/js")));
 app.use("/js", express.static(path.join(__dirname, "/node_modules/jquery/dist")));
 
 const shopRouter = require("./src/v1/routes/shopRoutes")
+const productsRouter = require("./src/v1/routes/products")
 app.use("/shop", shopRouter);
+app.use("/api", productsRouter)
 
-console.log(process.env.DATABASE_URL)
+// console.log(process.env.DATABASE_URL)
 
 app.get("/", function (req, res) {
     res.render("homepage",
@@ -36,7 +44,17 @@ app.get("/", function (req, res) {
         })
 });
 
-// run node
-app.listen(port, function () {
-    debug(`Listening on port ${chalk.green(port)}`);
-});
+mongoose.set('strictQuery', false);
+mongoose
+    .connect(dburi["dburi"])
+    .then(run => {
+        // run node
+        app.listen(port, function () {
+            debug(`Listening on port ${chalk.green(port)}`);
+        })
+    })
+    .catch(e => {
+        console.error(e)
+    })
+
+
