@@ -1,4 +1,5 @@
 const express = require("express");
+const fileUpload = require('express-fileupload')
 const chalk = require("chalk");
 const path = require("path");
 const debug = require("debug")("app");
@@ -6,8 +7,6 @@ const morgan = require("morgan");
 const mongoose = require("mongoose")
 const dburi = require("./src/v1/config/dburi.json")
 const { MongoClient, ServerApiVersion } = require("mongodb");
-
-// console.log(dburi["dburi"])
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -19,7 +18,7 @@ app.set("view engine", "ejs");
 
 
 
-// app.use(fileUpload());
+app.use(fileUpload());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/css", express.static(path.join(__dirname, "/node_modules/bootstrap/dist/css")));
@@ -37,7 +36,7 @@ app.get("/", function (req, res) {
     res.render("homepage",
         {
             nav: [
-                { link: "/store", title: "Store" },
+                { link: "/shop", title: "Store" },
                 { link: "/checkout", title: "Checkout" },
             ],
             title: "My Online Store"

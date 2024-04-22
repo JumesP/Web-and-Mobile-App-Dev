@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function submitForm() {
+        document.productForm.submit();
+        document.ProductForm.reset();
+      }
+    </script>
+    <h1>Add new Product:</h1>
+    <form
+      action="/api/products"
+      method="POST"
+      enctype="multipark/form-data"
+      name="productForm"
+      target="formRes"
+    >
+      <div>
+        <label for="name"></label>
+        <input
+          class="form-control"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Orange"
+          required
+        />
+      </div>
+      <div>
+        <label for="price"></label>
+        <input
+          class="form-control"
+          type="number"
+          id="price"
+          name="price"
+          placeholder="0.99"
+          required
+        />
+      </div>
+      <div>
+        <label for="category"></label>
+        <input
+          class="form-control"
+          type="text"
+          id="category"
+          name="category"
+          placeholder="fruit"
+          required
+        />
+      </div>
+      <div>
+        <label for="description"></label>
+        <input
+          class="form-control"
+          type="text"
+          id="description"
+          name="description"
+          placeholder="Sweet Fruit"
+          required
+        />
+      </div>
+      <div>
+        <label for="image"></label>
+        <input class="form-control" type="file" id="image" name="image" />
+      </div>
+      <button type="button" onclick="submitForm()">submit</button>
+    </form>
+    <p>Response:</p>
+    <iframe width="1000px" class="iframe" name="formRes"></iframe>
+  </body>
+</html>

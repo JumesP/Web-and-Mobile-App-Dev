@@ -1,5 +1,6 @@
 const Product = require('../models/productModel')
 const mongoose = require('mongoose');
+const path = require('path')
 
 exports.createProducts = (req, res, next) => {
 
@@ -16,12 +17,20 @@ exports.createProducts = (req, res, next) => {
         price: productPrice,
         category: productCate,
         description: productDesc
-        // image: productImg,
     })
 
     product
         .save()
         .then(productSaved => {
+
+            // const filePath = path.join(__dirname, '../../public/img/${productSaved._id}.png')
+
+            // productImg.mv(filePath, err => {
+            //     if (err)
+            //         return console.log(err);
+            // })
+
+
             res.status(201).json({
                 message: "Product successfully added",
                 product: productSaved
@@ -35,8 +44,8 @@ exports.getAllProducts = (req, res, next) => {
     Product.find()
         .then(foundProducts => {
             res.json({
-                message: "All items",
-                items: foundProducts
+                message: "All products",
+                products: foundProducts
             })
         })
 }
