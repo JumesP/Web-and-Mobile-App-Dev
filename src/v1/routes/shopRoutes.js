@@ -25,17 +25,10 @@ const blogs = [
     },
 ]
 
-
-
-
-// const products = router.get('/products', productController.getAllProducts)
-
-// console.log(products)
-
 shopRouter.route("/")
     .get(async function (req, res) {
         try {
-            const promise = fetch("http://localhost:3001" + "/api/products").then((response) => {
+            const promise = fetch(dbURL.webpage + "/api/products").then((response) => {
                 return response.json().then((data) => {
                     console.log(data.products[0].name)
                     res.render("store", {
