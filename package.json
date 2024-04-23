@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=app nodemon app.js"
+    "start": "DEBUG=app ;node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +22,7 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.0",
+    "nodemon": "^3.0.1",
     "save": "^2.9.0"
   },
   "nodemonConfig": {
@@ -32,7 +32,6 @@
     ],
     "delay": 2500,
     "env": {
-      "NODE_ENV": "development",
       "DATABASE_URL": "mongodb://127.0.0.1/testdb"
     }
   }
