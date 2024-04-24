@@ -26,8 +26,10 @@ app.use("/js", express.static(path.join(__dirname, "/node_modules/bootstrap/dist
 app.use("/js", express.static(path.join(__dirname, "/node_modules/jquery/dist")));
 
 const shopRouter = require("./src/v1/routes/shopRoutes")
+const mainRouter = require("./src/v1/routes/mainRouter")
 const productsRouter = require("./src/v1/routes/products")
 app.use("/shop", shopRouter);
+app.use("/landing", mainRouter);
 app.use("/api", productsRouter)
 
 // console.log(process.env.DATABASE_URL)

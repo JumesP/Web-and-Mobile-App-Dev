@@ -1,5 +1,5 @@
 const express = require("express");
-const shopRouter = express.Router();
+const router = express.Router();
 const dbURL = require("../config/dburi.json")
 // const router = require("./products")
 // const productController = require('../controllers/productsController')
@@ -25,12 +25,11 @@ const blogs = [
     },
 ]
 
-shopRouter.route("/")
+router.route("/")
     .get(async function (req, res) {
         try {
             const promise = fetch(dbURL.webpage + "/api/products").then((response) => {
                 return response.json().then((data) => {
-                    console.log(data.products[0].name)
                     res.render("store", {
                         nav: [
                             { link: "/shop", title: "Shop" },
@@ -44,11 +43,9 @@ shopRouter.route("/")
         } catch (e) { console.log(e) }
     });
 
-shopRouter.route("/additem")
+router.route("/additem")
     .get((req, res) => {
         res.render("new_product")
     })
 
-
-
-module.exports = shopRouter;
+module.exports = router;
