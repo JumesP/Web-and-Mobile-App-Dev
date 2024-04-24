@@ -22,7 +22,7 @@
       target="formRes"
     >
       <div>
-        <label for="name"></label>
+        <label for="name">Name: </label>
         <input
           class="form-control"
           type="text"
@@ -33,7 +33,7 @@
         />
       </div>
       <div>
-        <label for="price"></label>
+        <label for="price">Price: £</label>
         <input
           class="form-control"
           type="number"
@@ -44,7 +44,7 @@
         />
       </div>
       <div>
-        <label for="category"></label>
+        <label for="category">Category: </label>
         <input
           class="form-control"
           type="text"
@@ -55,7 +55,7 @@
         />
       </div>
       <div>
-        <label for="description"></label>
+        <label for="description">Description: </label>
         <input
           class="form-control"
           type="text"
@@ -66,8 +66,14 @@
         />
       </div>
       <div>
-        <label for="image"></label>
-        <input class="form-control" type="file" id="image" name="image" />
+        <label for="image">Image: </label>
+        <input
+          class="form-control"
+          type="file"
+          id="image"
+          name="image"
+          required
+        />
       </div>
       <button type="button" onclick="submitForm()">submit</button>
     </form>
