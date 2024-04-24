@@ -9,7 +9,7 @@ router.get('/products', productController.getAllProducts)
 router.post('/products', productController.createProducts)
 
 //  get product by id
-// router.get('/products/:id', productController.getProduct)
+router.get('/products/:id', productController.getProduct)
 
 //  delete product
 // router.delete('/products', productController.deleteProduct)

@@ -51,3 +51,18 @@ exports.getAllProducts = (req, res, next) => {
             })
         })
 }
+
+exports.getProduct = (req, res, next) => {
+    const validIDBool = mongoose.Types.ObjectId.isValid(req.params.id)
+
+    if (validIDBool) {
+        Product.findById(req.params.id).then(foundProduct => {
+            res.json({
+                message: "Product found",
+                product: foundProduct
+            })
+        })
+    } else {
+        return res.status(404).send({ message: "Couldnt find product" })
+    }
+}
