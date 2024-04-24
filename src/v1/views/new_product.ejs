@@ -9,15 +9,16 @@
     <script>
       function submitForm() {
         document.productForm.submit();
-        // document.ProductForm.reset();
+        // document.productForm.reset();
       }
     </script>
     <h1>Add new Product:</h1>
     <form
       action="/api/products"
       method="POST"
-      enctype="multipark/form-data"
+      enctype="multipart/form-data"
       name="productForm"
+      id="productForm"
       target="formRes"
     >
       <div>
@@ -27,7 +28,7 @@
           type="text"
           id="name"
           name="name"
-          placeholder="Orange"
+          placeholder="T-Shirt"
           required
         />
       </div>
@@ -38,7 +39,7 @@
           type="number"
           id="price"
           name="price"
-          placeholder="0.99"
+          placeholder="20"
           required
         />
       </div>
@@ -49,7 +50,7 @@
           type="text"
           id="category"
           name="category"
-          placeholder="fruit"
+          placeholder="Shirts"
           required
         />
       </div>
@@ -60,7 +61,7 @@
           type="text"
           id="description"
           name="description"
-          placeholder="Sweet Fruit"
+          placeholder="Lovely blue t-shirt, high quality and fashionable"
           required
         />
       </div>

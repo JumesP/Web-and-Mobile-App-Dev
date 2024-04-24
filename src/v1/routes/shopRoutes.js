@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const dbURL = require("../config/dburi.json")
+
 // const router = require("./products")
 // const productController = require('../controllers/productsController')
 
@@ -26,7 +27,7 @@ const blogs = [
 ]
 
 router.route("/")
-    .get(async function (req, res) {
+    .get(function (req, res) {
         try {
             const promise = fetch(dbURL.webpage + "/api/products").then((response) => {
                 return response.json().then((data) => {
@@ -50,7 +51,7 @@ router.route("/add_product")
 
 
 router.route("/:id")
-    .get(async function (req, res) {
+    .get(function (req, res) {
         try {
             const promise = fetch(dbURL.webpage + "/api/products/" + req.params.id).then((response) => {
                 if (response.status === 404) {

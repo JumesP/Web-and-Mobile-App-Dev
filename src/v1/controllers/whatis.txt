@@ -1,1 +1,0 @@
-grabs data from database, adds to the views, then displays it to the user as a html doc

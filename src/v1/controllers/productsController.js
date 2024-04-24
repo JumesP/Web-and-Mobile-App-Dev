@@ -1,14 +1,15 @@
 const Product = require('../models/productModel')
 const mongoose = require('mongoose');
 const path = require('path')
+const fs = require('fs')
 
 exports.createProducts = (req, res, next) => {
 
-    console.log(req.body.name)
+    // console.log(req.body.name)
 
-    if (!req.body || Object.keys(req.files).length === 0) {
-        return res.status(400).send("no files were uploaded")
-    }
+    // if (!req.body || Object.keys(req.files).length === 0) {
+    //     return res.status(400).send("no files were uploaded")
+    // }
 
     const productName = req.body.name
     const productPrice = req.body.price;
@@ -27,7 +28,7 @@ exports.createProducts = (req, res, next) => {
         .save()
         .then(productSaved => {
 
-            const filePath = path.join(__dirname, `../../public/img/${productSaved._id}.png`)
+            const filePath = path.join(__dirname, `../../../public/img/${productSaved._id}.png`)
 
             productImg.mv(filePath, err => {
                 if (err) return console.log(err);
@@ -65,4 +66,20 @@ exports.getProduct = (req, res, next) => {
     } else {
         return res.status(404).send({ message: "Couldnt find product" })
     }
+}
+
+exports.deleteProduct = (req, res, next) => {
+
+    filePath = path.join(__dirname, `../../../public/img/${req.body.id}.png`)
+
+    Product.findByIdAndDelete(req.body.id).then(deletedProduct => {
+        res.json({
+            message: "deleted product!",
+            product: deletedProduct
+        })
+        fs.rmSync(filePath, {
+            force: true
+        })
+    })
+
 }
