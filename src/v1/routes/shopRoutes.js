@@ -49,22 +49,21 @@ router.route("/add_product")
     })
 
 
-router.route("/:id", function (req, res) {
-    // .get((req, res) => {
-    //     res.render("item_page")
-    // })
-    try {
-        const promise = fetch(dbURL.webpage + "/api/products/" + req.params.id).then((response) => {
-            if (response.status === 404) {
-                res.status(404).send({ message: "Unable to find product" })
-            }
-            return response.json().then((data) => {
-                res.render("item_page", data)
+router.route("/:id")
+    .get(async function (req, res) {
+        try {
+            const promise = fetch(dbURL.webpage + "/api/products/" + req.params.id).then((response) => {
+                if (response.status === 404) {
+                    res.status(404).send({ message: "Unable to find product" })
+                }
+                return response.json().then((data) => {
+                    console.log(data)
+                    res.render("item_page", { data })
+                })
             })
-        })
-    } catch (e) {
-        console.log(e)
-    }
-})
+        } catch (e) {
+            console.log(e)
+        }
+    })
 
 module.exports = router;

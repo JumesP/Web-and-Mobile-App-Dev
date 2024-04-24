@@ -35,7 +35,7 @@ app.use("/api", productsRouter)
 // console.log(process.env.DATABASE_URL)
 
 app.get("/", function (req, res) {
-    res.render("homepage",
+    res.render("landing",
         {
             nav: [
                 { link: "/shop", title: "Store" },
