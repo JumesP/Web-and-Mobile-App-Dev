@@ -5,12 +5,6 @@ const fs = require('fs')
 
 exports.createProducts = (req, res, next) => {
 
-    // console.log(req.body.name)
-
-    // if (!req.body || Object.keys(req.files).length === 0) {
-    //     return res.status(400).send("no files were uploaded")
-    // }
-
     const productName = req.body.name
     const productPrice = req.body.price;
     const productCate = req.body.category;
