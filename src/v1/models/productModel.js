@@ -21,13 +21,3 @@ const product = new Schema({
 })
 
 module.exports = mongoose.model('product', product)
-
-
-// {
-//     name: "Apple",
-//     price: 0.99,
-//     category: "Fruit",
-//     description: "A sweet fruit"
-// }
-
-    // "start": "DEBUG=app nodemon app.js"

@@ -1,30 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const dbURL = require("../config/dburi.json")
-
-// const router = require("./products")
-// const productController = require('../controllers/productsController')
-
-const blogs = [
-    {
-        title: "My First Blog",
-        subtitle: "This is the first blog that I have written",
-        author: "Jon Doe",
-        date: "21st October"
-    },
-    {
-        title: "My Second Blog",
-        subtitle: "This is the second blog that I have written",
-        author: "Jon Doe",
-        date: "22st October"
-    },
-    {
-        title: "My Third Blog",
-        subtitle: "This is the third blog that I have written",
-        author: "Jon Doe",
-        date: "23st October"
-    },
-]
+const dbURL = require("../config/dburi.json");
 
 router.route("/")
     .get(function (req, res) {
