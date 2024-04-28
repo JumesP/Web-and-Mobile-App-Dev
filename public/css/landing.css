@@ -49,6 +49,6 @@
         border-bottom-color: #fff;
       }
 
-      var(--bs-heading-color){
-        color: #bbbbbb;
+      h1, h3, p, footer, a {
+        color: #fff;
       }
