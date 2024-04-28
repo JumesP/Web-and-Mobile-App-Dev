@@ -1,6 +1,7 @@
 {
     "short_name": "Online Webstore",
     "name": "The Online Webstore",
+    "description": "The Online Webstore is a webstore that sells a variety of products.",
     "icons": [
         {
             "src": "/icons/16.png",
@@ -38,5 +39,5 @@
     "start_url": "/",
     "background_color": "#484848",
     "theme_color": "#48484",
-    "display": "standalone"
+    "display": "fullscreen"
 }
