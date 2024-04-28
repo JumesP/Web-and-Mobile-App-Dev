@@ -1,5 +1,3 @@
-// service-worker.js
-
 const casheName = "OnlineWebstore";
 const filesToCache = [
     "/",

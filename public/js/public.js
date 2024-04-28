@@ -27,7 +27,7 @@ if ('IntersectionObserver' in window) {
 }
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/js/service-worker.js')
+    navigator.serviceWorker.register('/public/js/service-worker.js')
         .then(reg => {
             console.log('Service worker registered', reg);
         })
