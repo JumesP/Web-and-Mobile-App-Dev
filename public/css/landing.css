@@ -30,6 +30,7 @@
       .nav-masthead .nav-link {
         padding: 0.25rem 0;
         font-weight: 700;
+        color: #d3d3d3;
         background-color: transparent;
         border-bottom: 0.25rem solid transparent;
       }
