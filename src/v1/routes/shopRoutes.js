@@ -17,7 +17,9 @@ router.route("/")
                     });
                 })
             })
-        } catch (e) { console.log(e) }
+        } catch (e) {
+            console.log(e)
+        }
     });
 
 router.route("/add_product")
