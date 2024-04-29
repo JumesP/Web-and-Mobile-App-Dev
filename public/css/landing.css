@@ -49,6 +49,6 @@
         border-bottom-color: #fff;
       }
 
-      h1, h3, p, footer, a {
+      h1, h3, p, footer, a, .nav-link {
         color: #fff;
       }
