@@ -49,4 +49,6 @@ This is created using a EJS template and populated using product data from the d
 
 <img width="1803" alt="Screenshot 2024-07-06 at 21 50 26" src="https://github.com/JumesP/Web-and-Mobile-App-Dev/assets/118614403/9bb4a9ac-82e8-400d-acfe-466d91ebc314">
 
+website is currently down as my student account ran out of credits
+
 ### Thanks for checking it out and reading about this project.
