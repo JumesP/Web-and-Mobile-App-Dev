@@ -8,11 +8,11 @@ const loadImages = (image) => {
 }
 
 if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((items, observer) => {
-        items.forEach((item) => {
-            if (item.isIntersecting) {
-                loadImages(item.target);
-                observer.unobserve(item.target);
+    const observer = new IntersectionObserver((products, observer) => {
+        products.forEach((product) => {
+            if (product.isIntersecting) {
+                loadImages(product.target);
+                observer.unobserve(product.target);
             }
         });
     });
@@ -24,4 +24,14 @@ if ('IntersectionObserver' in window) {
     imagesToLoad.forEach((img) => {
         loadImages(img);
     });
+}
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/public/js/service-worker.js')
+        .then(reg => {
+            console.log('Service worker registered', reg);
+        })
+        .catch(err => {
+            console.log('Service worker not registered', err);
+        });
 }

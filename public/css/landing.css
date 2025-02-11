@@ -1,7 +1,7 @@
       .btn-secondary,
       .btn-secondary:hover,
       .btn-secondary:focus {
-        color: rgb(40, 39, 39);
+        color: rgb(70, 70, 70);
         text-shadow: none; /* Prevent inheritance from `body` */
       }
 
@@ -30,7 +30,7 @@
       .nav-masthead .nav-link {
         padding: 0.25rem 0;
         font-weight: 700;
-        color: rgba(0, 0, 0, 0.5);
+        color: #d3d3d3;
         background-color: transparent;
         border-bottom: 0.25rem solid transparent;
       }
@@ -47,4 +47,8 @@
       .nav-masthead .active {
         color: #fff;
         border-bottom-color: #fff;
+      }
+
+      h1, h3, p, footer, a, .nav-link {
+        color: #d3d3d3;
       }

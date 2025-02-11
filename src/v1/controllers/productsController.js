@@ -68,7 +68,7 @@ exports.deleteProduct = (req, res, next) => {
 
     Product.findByIdAndDelete(req.body.id).then(deletedProduct => {
         res.json({
-            message: "deleted product!",
+            message: "Deleted product!",
             product: deletedProduct
         })
         fs.rmSync(filePath, {
